@@ -270,21 +270,6 @@ textarea {
   line-height: 1.8;
 }
 
-body.home{
-  background: #5f4b8b;
-  color: #fff;
-}
-
-body.home .entry-header{
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-body.home p{
-  padding: 0 40px;
-}
-
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
@@ -297,8 +282,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1em 0;
 }
 
-.home .entry-header h1.entry-title {
-  font-size: 64px;
+.entry-header h1.entry-title {
+  font-size: 48px;
   line-height: 1.4;
   margin: 0;
 }
@@ -513,14 +498,20 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: #5f4b8b;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+
+.entry-content a{
+  padding-bottom: 3px;
 }
 
 a:visited {
-  color: #333;
+  color: #5f4b8b;
 }
 
 a:hover, a:focus, a:active {
-  color: #aaa;
+  color: #9b86be;
 }
 
 a:focus {
@@ -531,10 +522,18 @@ a:hover, a:active {
   outline: 0;
 }
 
-.home a{
-  color: #fff;
+.entry-content a {
+  border-bottom: 3px solid rgba(95, 75, 139, 1);
+  -webkit-transition: border 500ms ease;
+  -moz-transition: border 500ms ease;
+  -ms-transition: border 500ms ease;
+  -o-transition: border 500ms ease;
+  transition: border 500ms ease;
 }
 
+.entry-content a:hover {
+  border-bottom: 3px solid rgba(95, 75, 139, 0);
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -613,7 +612,8 @@ a:hover, a:active {
 	margin: 0 auto 60px;
   max-width: 720px;
 	overflow: hidden;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+  font-style: italic;
 }
 
 .comment-navigation .nav-previous,
@@ -629,6 +629,24 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+ul.link-list{
+  border-top: 1px solid #111;
+  font-size: 140%;
+  font-weight: 700;
+  margin: 0;
+  padding: 60px 0 0 0;
+}
+
+body.home ul.link-list{
+  padding: 0;
+}
+
+.link-list li{
+  list-style: none;
+  float: left;
+  margin: 20px 20px 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -755,7 +773,10 @@ a:hover, a:active {
 }
 
 .site-footer {
-  margin: 1em 0;
+  border-top: 1px solid #111;
+  margin: 1em auto;
+  max-width: 720px;
+  padding: 40px 0;
 }
 
 #content{
@@ -802,7 +823,7 @@ a:hover, a:active {
 }
 
 .site-info{
-  padding: 0 20px;
+  padding: 0 20px 0 0;
 }
 
 .entry-footer span{

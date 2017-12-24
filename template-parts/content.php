@@ -25,7 +25,9 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
+		<!-- <footer class="entry-footer">
+			<?php logicalgutenberg_entry_footer(); ?>
+		</footer>--><!-- .entry-footer -->
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
@@ -48,7 +50,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php logicalgutenberg_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
