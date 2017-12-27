@@ -15,11 +15,11 @@
 .wp-block-gallery,
 .wp-block-table{
   margin: 1.5em auto;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .wp-block-video video {
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .wp-block-cover-text.alignwide,
@@ -49,7 +49,7 @@
 }
 
 .wp-block-cover-text p{
-  padding: 1.5em 0;
+  padding: 1.5em 20px;
 }
 
 .wp-block-table {
@@ -64,4 +64,10 @@
 
 .wp-block-table td, .wp-block-table th {
   padding: .5em;
+}
+
+@media screen and (min-width: 768px) {
+  .wp-block-cover-text p{
+    padding: 1.5em 0;
+  }
 }

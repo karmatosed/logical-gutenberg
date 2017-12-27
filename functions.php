@@ -42,9 +42,9 @@ if ( ! function_exists( 'logicalgutenberg_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'logicalgutenberg' ),
+			'social' => __( 'Social Links Menu', 'twentyseventeen' ),
 		) );
 
 		/*
@@ -113,6 +113,15 @@ function logicalgutenberg_fonts_url() {
 }
 
 /**
+ * Load svg's using - Dashicons svg are being used
+ */
+function logicalgutenberg_svg(){
+	$svg_icons = get_template_directory() . '/assets/icons/arrow-left.svg';
+	require_once( $svg_icons );
+}
+add_action('after_body', 'logicalgutenberg_svg');
+
+/**
  * Enqueue scripts and styles.
  */
 function logicalgutenberg_scripts() {
@@ -139,6 +148,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 /**
  * Load Jetpack compatibility file.
