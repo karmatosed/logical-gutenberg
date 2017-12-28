@@ -39,6 +39,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Media Queries
+# SVG
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -263,6 +265,7 @@ input,
 select,
 optgroup,
 textarea {
+  background: #fAf8f5;
   color: #111;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -275,15 +278,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .entry-header h2.entry-title {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 36px;
+  font-size: 2rem;
+  line-height: 1.2;
   margin: 1em 0;
 }
 
 .entry-header h1.entry-title {
-  font-size: 22px;
-  line-height: 1.375;
+  font-size: 36px;
+  font-size: 2rem;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -331,6 +335,11 @@ big {
   font-size: 125%;
 }
 
+li{
+  list-style-position: inside;
+  text-indent: -1.5em;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -346,7 +355,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #fAf8f5;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -497,12 +506,14 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: #5f4b8b;
-  padding-bottom: 0;
+  border-bottom: 2px solid rgba(95, 75, 139, 1);
+  padding-bottom: 2px;
   text-decoration: none;
-}
-
-.entry-content a{
-  padding-bottom: 3px;
+  -webkit-transition: border 0.4s ease;
+  -moz-transition: border 0.4s ease;
+  -ms-transition: border 0.4s ease;
+  -o-transition: border 0.4s ease;
+  transition: border 0.4s ease;
 }
 
 a:visited {
@@ -511,6 +522,7 @@ a:visited {
 
 a:hover, a:focus, a:active {
   color: #9b86be;
+  border-bottom: 2px solid rgba(95, 75, 139, 0);
 }
 
 a:focus {
@@ -521,18 +533,41 @@ a:hover, a:active {
   outline: 0;
 }
 
-.entry-content a {
-  border-bottom: 3px solid rgba(95, 75, 139, 1);
-  -webkit-transition: border 500ms ease;
-  -moz-transition: border 500ms ease;
-  -ms-transition: border 500ms ease;
-  -o-transition: border 500ms ease;
-  transition: border 500ms ease;
+/*--------------------------------------------------------------
+## Animations
+--------------------------------------------------------------*/
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; }
 }
 
-.entry-content a:hover {
-  border-bottom: 3px solid rgba(95, 75, 139, 0);
+.animated{
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
 }
+
+.animated-fade-in{
+  animation-name: fade-in;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-6 {
+  animation-delay: 0.8s;
+}
+
 
 /*--------------------------------------------------------------
 ## Menus
@@ -540,8 +575,8 @@ a:hover, a:active {
 /* Social nav */
 .social-navigation {
   color: #fff;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .social-navigation ul {
@@ -554,7 +589,7 @@ a:hover, a:active {
 	display: inline-block;
   padding: 0;
   margin: 0;
-  width: 26px;
+  width: 28px;
 }
 
 .social-navigation a {
@@ -573,20 +608,20 @@ a:hover, a:active {
 }
 
 .social-navigation .icon {
-	height: 18px;
-	top: 6px;
-	width: 18px;
+	height: 20px;
+	top: 5px;
+	width: 20px;
 	vertical-align: top;
 }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
+  font-style: italic;
 	margin: 0 auto 40px;
   max-width: 760px;
 	overflow: hidden;
   padding-bottom: 0;
-  font-style: italic;
 }
 
 .comment-navigation .nav-previous,
@@ -619,6 +654,7 @@ a:hover, a:active {
   float: left;
   margin: 10px 10px 10px 0;
 }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -719,12 +755,12 @@ a:hover, a:active {
 }
 
 body.site-footer {
-  margin: 1em auto;
+  margin: 1em auto 3em;
   max-width: 740px;
 }
 
 .site-footer {
-  margin: 0 auto 1em;
+  margin: 0 auto 3em;
   max-width: 740px;
 }
 
@@ -744,7 +780,7 @@ body.site-footer {
 }
 
 .home .hentry {
-  margin: 12% 0 0 0;
+  margin: 6% 0 0 0;
 }
 
 .updated:not(.published) {
@@ -790,8 +826,18 @@ body.site-footer {
   display: none;
 }
 
-.entry-content p{
-  padding: 0 20px;
+.entry-meta{
+  margin-top: 20px;
+}
+
+.wp-block-separator.full-line {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: fade-in;
+  animation-delay: 0.2s;
+  border-bottom: 1px solid #111;
+  max-width: 740px;
+  margin: 2em 20px 1em;
 }
 
 /*--------------------------------------------------------------
@@ -930,13 +976,18 @@ object {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-size: 1.125rem;
-    line-height: 1.5;
+    line-height: 1.6;
+  }
+
+  .wp-block-separator.full-line {
+    margin: 2em auto 1em;
   }
 
   .entry-header h1.entry-title,
   .entry-header h2.entry-title {
     font-size: 48px;
     font-size: 3rem;
+    line-height: 1.2;
   }
 
   h1 {
@@ -1023,9 +1074,13 @@ object {
     padding: 0;
     margin: 4.5em auto 1em;
   }
+
+  .entry-content img{
+    border: 1px solid #f2ebe1;
+  }
 }
 /*--------------------------------------------------------------
-SVGs Fallbacks
+SVG
 --------------------------------------------------------------*/
 /* SVG Icons base styles */
 .icon {
@@ -1074,7 +1129,6 @@ SVGs Fallbacks
 }
 
 /* Social Menu fallbacks */
-
 .no-svg .social-navigation a {
 	background: transparent;
 	color: #222;

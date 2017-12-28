@@ -206,8 +206,9 @@ function logicalgutenberg_social_links_icons() {
 		'yelp.com'        => 'yelp',
 		'youtube.com'     => 'youtube',
 		// Custom icons for specific links
-		'gutenberg-wordpress.dev'     => 'arrow-left',// chnage to home on every site that uses this
-		'mailto:karmatosed@gmail.com'     => 'mail-reply'
+		'logicalbinary.com'     => 'arrow-left',// chnage to home on every site that uses this
+		'mailto:karmatosed@gmail.com'     => 'mail-reply',
+		'sketchnotes.blog'     => 'edit'
 	);
 
 	/**
