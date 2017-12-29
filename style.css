@@ -609,9 +609,9 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-.entry-content .link-list li{
-  list-style: none;
+.entry-content .link-list li {
   float: left;
+  list-style: none;
   margin: 10px 10px 10px 0;
 }
 
@@ -724,11 +724,11 @@ body.site-footer {
   max-width: 740px;
 }
 
-#content{
+#content {
   padding-top: 20px;
 }
 
-body.error404 #page{
+body.error404 #page {
   margin: 0 auto;
   max-width: 740px;
 }
@@ -772,25 +772,25 @@ body.error404 #page{
   padding: 0 20px;
 }
 
-.site-info{
+.site-info {
   padding: 0 20px;
 }
 
-.entry-footer span{
+.entry-footer span {
   margin-right: 1em;
 }
 
-.entry-footer{
+.entry-footer {
   color: #fff;
   font-size: 80%;
   padding: 0 20px 40px;
 }
 
-.home .entry-footer{
+.home .entry-footer {
   display: none;
 }
 
-.entry-meta{
+.entry-meta {
   margin-top: 20px;
 }
 
@@ -815,45 +815,45 @@ body.error404 #page{
   display: block;
 }
 
-ol.comment-list{
+ol.comment-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.comment-meta{
+.comment-meta {
   font-size: 90%;
   font-style: italic;
 }
 
-.comment-author .avatar{
+.comment-author .avatar {
   float: left;
   margin: 0 20px 0 0;
 }
 
-.comment-author{
+.comment-author {
   float: left;
   margin-right: 10px;
 }
 
-.comment-content{
+.comment-content {
   clear: both;
 }
 
-.reply{
+.reply {
   margin: 1em 0 3em;
 }
 
-.sharedaddy{
+.sharedaddy {
   margin: 2em auto 1em;
   max-width: 740px;
 }
 
-div.sharedaddy h3.sd-title{
+div.sharedaddy h3.sd-title {
   display: none!important;
 }
 
-.sharedaddy{
+.sharedaddy {
   padding: 0 20px;
 }
 
@@ -1026,30 +1026,30 @@ object {
     font-size: 1.125rem;
   }
 
-  ul.link-list{
+  ul.link-list {
     font-size: 24px;
     font-size: 1.5rem;
     padding: 60px 0 0 0;
   }
 
-  .entry-content .link-list li{
+  .entry-content .link-list li {
     margin: 20px 20px 30px 0;
   }
 
-  #content{
+  #content {
     padding-top: 60px;
   }
 
-  .entry-content p{
+  .entry-content p {
     padding: 0;
   }
 
-  .entry-footer{
+  .entry-footer {
     font-size: 80%;
     padding: 0 0 40px 0;
   }
 
-  .site-info{
+  .site-info {
     padding: 0 20px 0 0;
   }
 
@@ -1076,16 +1076,16 @@ object {
     padding: 0px;
   }
 
-  .entry-content ul.link-list{
+  .entry-content ul.link-list {
     padding: 0;
     margin: 4.5em auto 1em;
   }
 
-  .entry-content img{
+  .entry-content img {
     border: 1px solid #f2ebe1;
   }
 
-  .sharedaddy{
+  .sharedaddy {
     padding: 0;
   }
 }
@@ -1171,12 +1171,12 @@ SVG
     opacity: 1; }
 }
 
-.animated{
+.animated {
   animation-duration: 0.4s;
   animation-fill-mode: both;
 }
 
-.animated-fade-in{
+.animated-fade-in {
   animation-name: fade-in;
 }
 
