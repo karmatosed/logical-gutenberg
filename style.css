@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 # Media Queries
 # SVG
+# Animations
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -335,11 +336,6 @@ big {
   font-size: 125%;
 }
 
-li{
-  list-style-position: inside;
-  text-indent: -1.5em;
-}
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -534,42 +530,6 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-## Animations
---------------------------------------------------------------*/
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; }
-}
-
-.animated{
-  animation-duration: 0.4s;
-  animation-fill-mode: both;
-}
-
-.animated-fade-in{
-  animation-name: fade-in;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-6 {
-  animation-delay: 0.6s;
-}
-
-.delay-6 {
-  animation-delay: 0.8s;
-}
-
-
-/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 /* Social nav */
@@ -619,7 +579,7 @@ a:hover, a:active {
 .post-navigation {
   font-style: italic;
 	margin: 0 auto 40px;
-  max-width: 760px;
+  max-width: 740px;
 	overflow: hidden;
   padding-bottom: 0;
 }
@@ -649,7 +609,7 @@ a:hover, a:active {
   overflow: hidden;
 }
 
-.link-list li{
+.entry-content .link-list li{
   list-style: none;
   float: left;
   margin: 10px 10px 10px 0;
@@ -768,6 +728,10 @@ body.site-footer {
   padding-top: 20px;
 }
 
+body.error404 #page{
+  margin: 0 auto;
+  max-width: 740px;
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -849,6 +813,48 @@ body.site-footer {
 
 .bypostauthor {
   display: block;
+}
+
+ol.comment-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-meta{
+  font-size: 90%;
+  font-style: italic;
+}
+
+.comment-author .avatar{
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.comment-author{
+  float: left;
+  margin-right: 10px;
+}
+
+.comment-content{
+  clear: both;
+}
+
+.reply{
+  margin: 1em 0 3em;
+}
+
+.sharedaddy{
+  margin: 2em auto 1em;
+  max-width: 740px;
+}
+
+div.sharedaddy h3.sd-title{
+  display: none!important;
+}
+
+.sharedaddy{
+  padding: 0 20px;
 }
 
 /*--------------------------------------------------------------
@@ -1026,8 +1032,8 @@ object {
     padding: 60px 0 0 0;
   }
 
-  .link-list li{
-    margin: 20px 20px 20px 0;
+  .entry-content .link-list li{
+    margin: 20px 20px 30px 0;
   }
 
   #content{
@@ -1077,6 +1083,10 @@ object {
 
   .entry-content img{
     border: 1px solid #f2ebe1;
+  }
+
+  .sharedaddy{
+    padding: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -1149,4 +1159,39 @@ SVG
 	height: auto;
 	position: relative !important; /* overrides previous !important styles */
 	width: auto;
+}
+
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; }
+}
+
+.animated{
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.animated-fade-in{
+  animation-name: fade-in;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-6 {
+  animation-delay: 0.8s;
 }
