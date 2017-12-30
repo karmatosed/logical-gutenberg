@@ -732,6 +732,13 @@ body.error404 #page {
   margin: 0 auto;
   max-width: 740px;
 }
+
+body.search #primary{
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 0 20px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1091,6 +1098,10 @@ object {
 
   .site-copyright{
     padding: 1.5em 0 2em;
+  }
+  
+  body.search #primary{
+    padding: 0px;
   }
 }
 /*--------------------------------------------------------------
