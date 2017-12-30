@@ -59,10 +59,8 @@
   padding: 1.5em 20px;
 }
 
-ul.wp-block-latest-posts.alignwide,
-ul.wp-block-latest-posts.alignfull,
-ul.wp-block-latest-posts.is-grid.alignwide,
-ul.wp-block-latest-posts.is-grid.alignwide {
+ul.wp-block-latest-posts,
+ul.wp-block-latest-posts.is-grid {
   padding: 0 20px;
 }
 
@@ -106,4 +104,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding-left: 0px;
     padding-right: 0px;
   }
+
+  ul.wp-block-latest-posts,
+  ul.wp-block-latest-posts.is-grid {
+    padding: 0;
+  }
+
 }
