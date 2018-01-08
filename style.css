@@ -864,6 +864,13 @@ div.sharedaddy h3.sd-title {
   padding: 0 20px;
 }
 
+ol.comment-list li.pingback{
+  font-size: 90%;
+  font-style: italic;
+  margin: 0 0 60px 0;
+  opacity: 0.7;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -1099,7 +1106,7 @@ object {
   .site-copyright{
     padding: 1.5em 0 2em;
   }
-  
+
   body.search #primary{
     padding: 0px;
   }
