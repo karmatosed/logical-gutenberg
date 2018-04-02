@@ -61,6 +61,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .entry-content li {
   list-style-position: outside;
+  margin: 0 0 0 20px;
 }
 
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
