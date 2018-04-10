@@ -759,6 +759,10 @@ body.site-footer {
   padding-top: 20px;
 }
 
+body.page-id-41 #content {
+  padding-top: 0;
+}
+
 body.error404 #page {
   margin: 0 auto;
   max-width: 740px;
@@ -768,6 +772,20 @@ body.search #primary{
   margin: 0 auto;
   max-width: 740px;
   padding: 0 20px;
+}
+
+#feature{
+  background: #0073aa;
+  color: #fff;
+  padding: 20px 0;
+}
+
+#feature h1,
+#feature p{
+  margin: 1.5em auto;
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -1041,6 +1059,16 @@ object {
     line-height: 1.2;
   }
 
+  #feature h1{
+    font-size: 64px;
+    font-size: 4rem;
+  }
+
+  #feature p {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+
   h1 {
     font-size: 48px;
     font-size: 3rem;
@@ -1084,6 +1112,10 @@ object {
 
   #content {
     padding-top: 60px;
+  }
+
+  body.page-id-41 #content {
+    padding-top: 0;
   }
 
   .entry-content p {
@@ -1141,6 +1173,12 @@ object {
 
   .entry-content .wp-block-latest-posts li{
     padding: 30px 0;
+  }
+
+  #feature{
+    background: #0073aa;
+    color: #fff;
+    padding: 100px 0;
   }
 }
 /*--------------------------------------------------------------
